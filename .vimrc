@@ -1,38 +1,9 @@
-"""""""""GENERAL SETTINGS"""""""""
-"Syntax highlighing on
-syntax on
-"This will load the specific filetype's indent file
-filetype plugin indent on
-"Font and font size
-set linespace=2
-"Colorscheme
-colorscheme wombat256mod
-"Word wrapping
-set wrap linebreak nolist
-"Backspace to work like normal
-set backspace=2
-"Relative linenumbering
-set relativenumber
-set nu
-"Current path working path
-set path=$PWD/**
-"Clipboard to work cross documents
-set clipboard=unnamed
-"Errorbells, both sound and visual
-set noerrorbells visualbell t_vb=
-"Tab intendation
-set shiftwidth=4
-set softtabstop=4
-set expandtab
-"Folding
-set foldmethod=manual
-
 """""""""PLUGIN SETTINGS"""""""""
 """Vundle settings"""
-
-"Set the runtime path to include Vundle and initialize
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
+
+"Set the runtime path to include Vundle and initialize
 
 Plugin 'VundleVim/Vundle.vim'
 Plugin 'scrooloose/syntastic'
@@ -46,6 +17,7 @@ Plugin 'tpope/vim-commentary'
 Plugin 'tpope/vim-fugitive'
 Plugin 'tpope/vim-surround'
 Plugin 'majutsushi/tagbar'
+Plugin 'altercation/vim-colors-solarized'
 
 call vundle#end()
 set nocompatible 
@@ -80,6 +52,37 @@ let g:airline_powerline_fonts = 0
 nnoremap <F8> :TagbarToggle<CR>
 let g:tagbar_width = 35
 
+"""""""""GENERAL SETTINGS"""""""""
+"Syntax highlighing on
+syntax enable
+"This will load the specific filetype's indent file
+filetype plugin indent on
+"Font and font size
+set linespace=2
+"Colors
+se t_Co=16
+let g:solarized_termcolors=256
+set background=dark
+colorscheme solarized
+"Word wrapping
+set wrap linebreak nolist
+"Backspace to work like normal
+set backspace=2
+"Relative linenumbering
+set relativenumber
+set nu
+"Current path working path
+set path=$PWD/**
+"Clipboard to work cross documents
+set clipboard=unnamed
+"Errorbells, both sound and visual
+set noerrorbells visualbell t_vb=
+"Tab intendation
+set shiftwidth=4
+set softtabstop=4
+set expandtab
+"Folding
+set foldmethod=manual
 """""""""LANGUAGE SPECIFIC"""""""""
 
 """Pyton"""
