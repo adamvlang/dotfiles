@@ -18,6 +18,7 @@ Plugin 'tpope/vim-fugitive'
 Plugin 'tpope/vim-surround'
 Plugin 'majutsushi/tagbar'
 Plugin 'altercation/vim-colors-solarized'
+Plugin 'osyo-manga/vim-anzu'
 
 call vundle#end()
 set nocompatible 
@@ -52,6 +53,16 @@ let g:airline_powerline_fonts = 0
 nnoremap <F8> :TagbarToggle<CR>
 let g:tagbar_width = 35
 
+"""NERDTree"""
+map <F6> :NERDTreeToggle<CR>
+
+"""Anzu"""
+set statusline=%{anzu#search_status()}
+nmap n <Plug>(anzu-n-with-echo)
+nmap N <Plug>(anzu-N-with-echo)
+nmap * <Plug>(anzu-star-with-echo)
+nmap # <Plug>(anzu-sharp-with-echo)
+
 """""""""GENERAL SETTINGS"""""""""
 "Syntax highlighing on
 syntax enable
@@ -83,6 +94,9 @@ set softtabstop=4
 set expandtab
 "Folding
 set foldmethod=manual
+
+"""""Key bindings"""""
+map <F7> :set ft=rave <CR>
 """""""""LANGUAGE SPECIFIC"""""""""
 
 """Pyton"""
