@@ -19,6 +19,7 @@ Plugin 'tpope/vim-surround'
 Plugin 'majutsushi/tagbar'
 Plugin 'altercation/vim-colors-solarized'
 Plugin 'osyo-manga/vim-anzu'
+Plugin 'phleet/vim-mercenary'
 
 call vundle#end()
 set nocompatible 
@@ -47,7 +48,7 @@ let g:snippets_dir='~/.vim/bundle/snipMate/snippets/'
 set laststatus=2 "Always show the statusline
 set enc=utf-8 "Nessesary for Unicode glyphs
 let g:airline_theme='wombat'
-let g:airline_powerline_fonts = 0
+let g:airline_powerline_fonts = 1
 
 """Tagbar"""
 nnoremap <F8> :TagbarToggle<CR>
@@ -89,8 +90,8 @@ set clipboard=unnamed
 "Errorbells, both sound and visual
 set noerrorbells visualbell t_vb=
 "Tab intendation
-set shiftwidth=4
-set softtabstop=4
+set shiftwidth=2
+set softtabstop=2
 set expandtab
 "Folding
 set foldmethod=manual
@@ -111,7 +112,9 @@ if has('autocmd')
     "Automatic views
     autocmd BufWinLeave *.* mkview
     autocmd BufWinEnter *.* silent loadview
-    
+    """""Python"""""
+    autocmd BufRead,BufNewFile *.py setlocal shiftwidth=4 softtabstop=4
+   
     """""LaTeX""""" 
     "Setting text width for latex
     autocmd BufRead,BufNewFile *.tex setlocal textwidth=90
