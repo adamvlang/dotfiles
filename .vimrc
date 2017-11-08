@@ -9,7 +9,6 @@ Plugin 'VundleVim/Vundle.vim'
 Plugin 'scrooloose/syntastic'
 Plugin 'scrooloose/nerdtree'
 Plugin 'lervag/vimtex'
-Plugin 'snipMate'
 Plugin 'bling/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
 Plugin 'Lokaltog/powerline'
@@ -20,6 +19,8 @@ Plugin 'majutsushi/tagbar'
 Plugin 'altercation/vim-colors-solarized'
 Plugin 'osyo-manga/vim-anzu'
 Plugin 'phleet/vim-mercenary'
+" Waiting on vim vesion for youcomplete me
+" Plugin 'Valloric/YouCompleteMe'
 
 call vundle#end()
 set nocompatible 
@@ -48,7 +49,7 @@ let g:snippets_dir='~/.vim/bundle/snipMate/snippets/'
 set laststatus=2 "Always show the statusline
 set enc=utf-8 "Nessesary for Unicode glyphs
 let g:airline_theme='wombat'
-let g:airline_powerline_fonts = 1
+let g:airline_powerline_fonts = 0
 
 """Tagbar"""
 nnoremap <F8> :TagbarToggle<CR>
