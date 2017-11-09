@@ -24,6 +24,7 @@ alias cdreports='cd /home/adamla/work/tracking/lib/python/report_sources/include
 alias cdmenu='cd /home/adamla/work/tracking/manu_scripts/system_roles/'
 alias cdtrack='cd /home/adamla/work/tracking/'
 alias cdplan='cd /home/adamla/work/planning'
+alias cdcus='cd /opt/Carmen/CARMUSR/'
 alias 2cd='cd ../../'
 alias 3cd='cd ../../../'
 
