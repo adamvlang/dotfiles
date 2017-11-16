@@ -16,7 +16,6 @@ setlocal keymap=
 setlocal noarabic
 setlocal noautoindent
 setlocal backupcopy=
-setlocal balloonexpr=
 setlocal nobinary
 setlocal nobreakindent
 setlocal breakindentopt=
@@ -48,7 +47,6 @@ setlocal expandtab
 if &filetype != 'vim'
 setlocal filetype=vim
 endif
-setlocal fixendofline
 setlocal foldcolumn=0
 setlocal foldenable
 setlocal foldexpr=0
@@ -101,11 +99,7 @@ setlocal nospell
 setlocal spellcapcheck=[.?!]\\_[\\])'\"\	\ ]\\+
 setlocal spellfile=
 setlocal spelllang=en
-<<<<<<< HEAD
-setlocal statusline=%!airline#statusline(2)
-=======
 setlocal statusline=
->>>>>>> 2b6449cbc2033e7303a2a78fb8a6da8451374f97
 setlocal suffixesadd=
 setlocal swapfile
 setlocal synmaxcol=3000
@@ -113,7 +107,6 @@ if &syntax != 'vim'
 setlocal syntax=vim
 endif
 setlocal tabstop=8
-setlocal tagcase=
 setlocal tags=
 setlocal textwidth=78
 setlocal thesaurus=
@@ -124,19 +117,11 @@ setlocal nowinfixwidth
 setlocal wrap
 setlocal wrapmargin=0
 silent! normal! zE
-<<<<<<< HEAD
-let s:l = 2 - ((1 * winheight(0) + 29) / 59)
+let s:l = 132 - ((58 * winheight(0) + 29) / 59)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
-2
-=======
-let s:l = 22 - ((21 * winheight(0) + 29) / 59)
-if s:l < 1 | let s:l = 1 | endif
-exe s:l
-normal! zt
-22
->>>>>>> 2b6449cbc2033e7303a2a78fb8a6da8451374f97
+132
 normal! 0
 let &so = s:so_save | let &siso = s:siso_save
 doautoall SessionLoadPost
