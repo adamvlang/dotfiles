@@ -7,6 +7,18 @@ fi
 
 # User specific aliases and functions
 
+# enable color support of ls and also add handy aliases
+if [ -x /usr/bin/dircolors ]; then
+    test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
+    alias ls='ls --color=auto'
+    #alias dir='dir --color=auto'
+    #alias vdir='vdir --color=auto'
+
+    alias grep='grep --color=auto'
+    alias fgrep='fgrep --color=auto'
+    alias egrep='egrep --color=auto'
+fi
+
 # -----------------FUNCTIONS--------------- #
 function PWD {
 pwd | awk -F\/ '{print $(NF-1),$(NF)}' | sed "s/ /\\//"
@@ -19,17 +31,10 @@ export PS1="[\[\e[1;32m\]\u\[\e[1;31m\]@\h \[\e[1;36m\][\t]\[\e[1;34m\]\[\033[1;
 
 
 # -----------------EVALS--------------- #
-# enable color support of ls and also add handy aliases
-if [ -x /usr/bin/dircolors ]; then
-    test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
-    alias ls='ls --color=auto'
-    #alias dir='dir --color=auto'
-    #alias vdir='vdir --color=auto'
 
-    alias grep='grep --color=auto'
-    alias fgrep='fgrep --color=auto'
-    alias egrep='egrep --color=auto'
-fi
+# -----------------SOURCING--------------- #
+source /opt/ros/lunar/setup.bash
+
 # -----------------ALIAS--------------- #
 alias cdpython='cd /home/adamla/work/tracking/lib/python/'
 alias cdrave='cd /home/adamla/work/tracking/crc/modules'
