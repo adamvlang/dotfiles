@@ -19,8 +19,7 @@ Plugin 'majutsushi/tagbar'
 Plugin 'altercation/vim-colors-solarized'
 Plugin 'osyo-manga/vim-anzu'
 Plugin 'phleet/vim-mercenary'
-" Waiting on vim vesion for youcomplete me
-" Plugin 'Valloric/YouCompleteMe'
+Plugin 'Valloric/YouCompleteMe'
 
 call vundle#end()
 set nocompatible 
@@ -69,7 +68,9 @@ nmap # <Plug>(anzu-sharp-with-echo)
 "Syntax highlighing on
 syntax enable
 "This will load the specific filetype's indent file
-filetype plugin indent on
+filetype indent on
+filetype plugin on
+
 "Font and font size
 set linespace=2
 "Colors
@@ -123,6 +124,10 @@ if has('autocmd')
     autocmd BufRead,BufNewFile *.tex setlocal spell spelllang=en_us
     "Setting filetpe to LaTeX
     autocmd BufRead,BufNewFile *.tex setlocal ft=tex
+
+    """""MATLAB"""""
+    autocmd BufRead,BufNewFile *.m setlocal ft=matlab 
+    autocmd FileType matlab setl cms=%\ %s
 
     """""NERDTree"""""
     autocmd VimEnter * NERDTree | wincmd p
