@@ -1,3 +1,6 @@
 [submodule "Vunudle.vim"]
   path = .vim/bundle/Vundle.vim
   url = https://github.com/VundleVim/Vundle.vim
+[submodule "syntax"]
+  path = .vim/syntax
+  url = https://github.com/adamvlang/syntax
