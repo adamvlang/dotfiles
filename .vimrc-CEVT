@@ -19,7 +19,7 @@ Plugin 'majutsushi/tagbar'
 Plugin 'altercation/vim-colors-solarized'
 Plugin 'osyo-manga/vim-anzu'
 Plugin 'phleet/vim-mercenary'
-Plugin 'Valloric/YouCompleteMe'
+" Plugin 'Valloric/YouCompleteMe'
 
 call vundle#end()
 set nocompatible 
