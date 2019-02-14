@@ -4,3 +4,6 @@
 [submodule "syntax"]
   path = .vim/syntax
   url = https://github.com/adamvlang/syntax
+[submodule ".vim/syntax"]
+	path = .vim/syntax
+	url = https://github.com/adamvlang/syntax
