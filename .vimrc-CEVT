@@ -104,7 +104,7 @@ map <F7> :set ft=rave <CR>
 
 """Pyton"""
 "Run script with <F5> in new window
-nnoremap <silent> <F5> :!clear;python %<CR>
+nnoremap <silent> <F5> :!clear;python3 %<CR>
 
 """""""""AUTO COMMANDS"""""""""
 if has('autocmd')
